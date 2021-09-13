@@ -1,10 +1,22 @@
 "use strict";
-let count = 0;
-let decrease = document.getElementById("decrease");
 
-decrease.addEventListener("click", myfunction);
+const increase = document.querySelector(".increase");
+const decrease = document.querySelector(".decrease");
+var i = 0;
 
-function myfunction() {
-  count += 1;
-  console.log(count);
+function incNumber() {
+  if (i < 10) {
+    i++;
+  } else if ((i = 10)) {
+    i = 0;
+  }
+  document.querySelector(`.box-${i}`).classList.remove("hidden");
+}
+function decNumber() {
+  if (i < 10) {
+    i++;
+  } else if ((i = 10)) {
+    i = 0;
+  }
+  document.querySelector(`.box-${i}`).classList.add("hidden");
 }
